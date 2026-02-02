@@ -15,7 +15,16 @@ export async function loginAction(formData: FormData) {
     redirect("/auth/login");
   }
   
+  cookiesInstance.delete("access_token");
   cookiesInstance.set("access_token", "EXAMPLE_TOKEN", {
+    httpOnly: true,
+    sameSite: "lax",
+    path: "/",
+    maxAge: 60 * 60 * 24
+  });
+  
+  cookiesInstance.delete("username");
+  cookiesInstance.set("username", username, {
     httpOnly: true,
     sameSite: "lax",
     path: "/",

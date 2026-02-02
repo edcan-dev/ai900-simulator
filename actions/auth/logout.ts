@@ -8,6 +8,7 @@ export async function logoutAction() {
   const cookiesInstance = await cookies();
 
   cookiesInstance.delete("access_token");
+  cookiesInstance.delete("username");
 
   redirect("/auth/login");
 }

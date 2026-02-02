@@ -1,15 +1,24 @@
 import { Header } from "@/components/shared/Header"
 import { Button } from "@/components/ui/button";
+import { getUserByCookiesUsername } from "@/services/users";
+import { redirect } from 'next/navigation'
 import Link from "next/link";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  
+  const user = await getUserByCookiesUsername();
+
+  if (!user) {
+    redirect("/auth/login");
+  }
+
   return (
     <>
     <Header />
     <main>
       <section className="flex h-dvh items-center justify-center flex-col">
 
-        <h1 className="font-bold font-title text-center mb-16">Hola, Yesenia! ¿Qué quieres hacer?</h1>
+        <h1 className="font-bold font-title text-center mb-16">¡Hola, {user.firstName}! ¿Qué quieres hacer?</h1>
 
         <div className="w-full max-w-200 grid grid-cols-2 gap-8"
         >
