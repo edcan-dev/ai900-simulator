@@ -4,19 +4,20 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --accent: oklch(61.6% 0.234 264.718);
+  --accent: oklch(62.3% 0.214 259.815);
   --radius: 0.625rem;
-  --background: oklch(88.2% 0.059 254.128);
+  /* --background: oklch(88.2% 0.059 254.128); */
+  --background: oklch(1 0 0);
   --background-secondary: oklch(93.2% 0.032 255.585);
   --foreground: oklch(28.2% 0.091 267.935);
-  --foreground-secondary: oklch(93.2% 0.032 255.585);
+  --foreground-secondary: oklch(1 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: lab(2.74% 0 0);
   --primary: oklch(28.2% 0.091 267.935);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: oklch(1 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -97,6 +98,10 @@
   .font-text {
     font-family: var(--font-sans);
     font-size: 14px;
+  }
+
+  .bg-gradient-primary-to-accent {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   }
 }
 
