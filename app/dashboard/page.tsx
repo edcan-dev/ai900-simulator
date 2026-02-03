@@ -23,12 +23,12 @@ export default async function DashboardPage() {
         <div className="w-full max-w-200 grid grid-cols-2 gap-8"
         >
           <Link href="/start-simulation">
-            <Button className="bg-gradient-primary-to-accent text-foreground-secondary py-16 rounded-lg">
+            <Button className="bg-gradient-primary-to-accent text-foreground-secondary py-16 rounded-lg cursor-pointer">
               <p className="font-subtitle font-bold">Comenzar simulación</p>
             </Button>
           </Link>    
-          <Link href="/results-history">
-            <Button className="bg-gradient-primary-to-accent text-foreground-secondary py-16 rounded-lg">
+          <Link href="/results-history" className="cursor-pointer">
+            <Button className="bg-gradient-primary-to-accent text-foreground-secondary py-16 rounded-lg cursor-pointer">
               <p className="font-subtitle font-bold">Consultar últimos resultados</p>
             </Button>      
           </Link>
