@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Pregunta 1",
+    "section_id": 1,
+    "type": "UNIQUE_SELECTION",
+    "question": "Una empresa cuenta con un equipo de agentes de atención al cliente para brindar soporte telefónico y por correo electrónico. La empresa desarrolla un chatbot web para brindar respuestas automatizadas a las consultas más comunes de los clientes. ¿Qué beneficios comerciales debería esperar la empresa al crear la solución de bot de chat web?",
+    "options": {
+      "A": "Aumento de ventas",
+      "B": "Una carga de trabajo reducida para los agentes de servicio al cliente",
+      "C": "Mayor fiabilidad del producto"
+    },
+    "answer": "Una carga de trabajo reducida para los agentes de  servicio al cliente"
+  },
+  {
+    "id": 2,
+    "title": "Pregunta 2",
+    "section_id": 1,
+    "type": "UNIQUE_SELECTION",
+    "question": "Para avanzar en el aprendizaje automático, ¿cómo se deben dividir los datos para el entrenamiento y la evaluación?",
+    "options": {
+      "A": "Utilizar funciones para el entrenamiento y etiquetas para la evaluación.",
+      "B": "Divida aleatoriamente los datos en filas para entrenamiento y filas para evaluación.",
+      "C": "Utilice etiquetas para la capacitación y características para la evaluación.",
+      "D": "Divida aleatoriamente los datos en columnas para entrenamiento y columnas para evaluación."
+    },
+    "answer": "Divida aleatoriamente los datos en filas para entrenamiento y filas para evaluación."
+  }
+]

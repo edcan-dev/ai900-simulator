@@ -1,6 +1,6 @@
 import headers from "next/headers";
 
-const { users } = await import('@/actions/data/users');
+const { users } = await import('@/data/users');
 export async function getUserByCookiesUsername() {
   
   const cookiesInstance = await headers.cookies();

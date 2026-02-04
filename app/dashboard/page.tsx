@@ -16,7 +16,7 @@ export default async function DashboardPage() {
     <>
     <Header />
     <main>
-      <section className="flex h-dvh items-center justify-center flex-col">
+      <section className="flex h-dvh items-center justify-center flex-col animate-fade-in">
 
         <h1 className="font-bold font-title text-center mb-16">¡Hola, {user.firstName}! ¿Qué quieres hacer?</h1>
 
