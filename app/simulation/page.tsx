@@ -10,9 +10,6 @@ export default async function SimulationPage(
   const type = (await searchParams).type as SimulationType | SimulationType.FULL;
   const sectionId = (await searchParams).sectionId ? parseInt((await searchParams).section as string) : undefined;
 
-  console.log(type)
-  console.log(sectionId)
-
   const questions = type === SimulationType.FULL
       ? await getQuestions() // Load all questions for FULL simulation
       : await getQuestionsBySection(sectionId || 0);

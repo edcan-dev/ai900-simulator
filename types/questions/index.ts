@@ -1,15 +1,18 @@
 import { QuestionType } from '@/enums/questions';
 
-export type Question = {
+export type BaseQuestion = {
   id: number;
   title: string;
   section_id: number;
   type: QuestionType;  
 }
 
-export type UniqueSelectionQuestion = Question & {
-  options: string[];
+export type UniqueSelectionQuestion = BaseQuestion & {
+  body: string[];
+  options: {
+    [key: string]: string;
+  };
   answer: string;
 };
 
-export type AnyQuestion = Question | UniqueSelectionQuestion;
+export type Question = BaseQuestion | UniqueSelectionQuestion;

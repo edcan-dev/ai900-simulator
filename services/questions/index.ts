@@ -1,11 +1,11 @@
-import { Question } from '@/types/questions';
+import { BaseQuestion } from '@/types/questions';
 
 const { questions } = await import('@/data/questions');
 
 export async function getQuestions() {
-  return questions ? questions as Question[] : [];
+  return questions ? questions as BaseQuestion[] : [];
 }
 
 export async function getQuestionsBySection(sectionId: number) {
-  return [] as Question[];
+  return [] as BaseQuestion[];
 }

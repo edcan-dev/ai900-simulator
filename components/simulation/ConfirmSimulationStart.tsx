@@ -5,12 +5,12 @@ import { Button } from "../ui/button";
 
 interface Props {
   type: SimulationType;
-  setSimulationStarted: (started: boolean) => void;
+  setSimulationActive: (started: boolean) => void;
 }
 
-export const ConfirmSimulationStart = ({ type, setSimulationStarted }: Props) => {
+export const ConfirmSimulationStart = ({ type, setSimulationActive: setSimulationStarted }: Props) => {
   return (
-    <div className="w-full max-w-200 grid grid-cols-1 gap-12 bg-secondary">
+    <div className="w-full max-w-200 grid grid-cols-1 gap-12 bg-secondary animate-fade-in">
       <h1 className="font-bold font-title text-center mb-8">
         {type === SimulationType.FULL
           ? "Simulación completa"

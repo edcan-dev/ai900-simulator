@@ -1,30 +1,33 @@
 "use client";
 
 import { SimulationType } from "@/enums/simulation";
-import { AnyQuestion, Question } from "@/types/questions";
+import { Question, BaseQuestion } from "@/types/questions";
 import { useState } from "react";
 import { ConfirmSimulationStart } from "./ConfirmSimulationStart";
+import { Simulation } from "./Simulation";
+import { questions } from '../../data/questions/index';
 
 interface Props {
   type: SimulationType;
   sectionId?: number;
-  questions: AnyQuestion[];
+  questions: Question[];
 }
 
 export const SimulationContainer = ({ type, questions }: Props) => {
-  const [isSimulationStarted, setSimulationStarted] = useState(false);
+  const [isSimulationActive, setSimulationActive] = useState(false);
 
   return (
-    <section className="flex h-dvh items-center justify-center flex-col animate-fade-in">
-      {!isSimulationStarted ? (
+    <section className="flex h-dvh items-center justify-center flex-col">
+      {!isSimulationActive ? (
         <ConfirmSimulationStart
           type={type}
-          setSimulationStarted={setSimulationStarted}
+          setSimulationActive={setSimulationActive}
         />
       ) : (
-        <div className="w-full max-w-200 grid grid-cols-1 gap-12 shadow-lg p-8 rounded-lg">
-          Simulación {type} en progreso...
-        </div>
+        <Simulation
+          type={type}
+          questions={questions}
+        />
       )}
     </section>
   );
