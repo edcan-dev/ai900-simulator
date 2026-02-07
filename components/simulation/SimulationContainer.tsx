@@ -6,6 +6,7 @@ import { useState } from "react";
 import { ConfirmSimulationStart } from "./ConfirmSimulationStart";
 import { Simulation } from "./Simulation";
 import { questions } from '../../data/questions/index';
+import { clearQuestionResults } from "@/services/simulation";
 
 interface Props {
   type: SimulationType;
@@ -14,6 +15,9 @@ interface Props {
 }
 
 export const SimulationContainer = ({ type, questions }: Props) => {
+
+  clearQuestionResults();
+
   const [isSimulationActive, setSimulationActive] = useState(false);
 
   return (
