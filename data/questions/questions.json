@@ -5,8 +5,14 @@
     "section_id": 1,
     "type": "UNIQUE_SELECTION",
     "body": [
-      "Una empresa cuenta con un equipo de agentes de atención al cliente para brindar soporte telefónico y por correo electrónico.",
-      "La empresa desarrolla un chatbot web para brindar respuestas automatizadas a las consultas más comunes de los clientes. ¿Qué beneficios comerciales debería esperar la empresa al crear la solución de bot de chat web?"
+      {
+        "type": "paragraph",
+        "content": "Una empresa cuenta con un equipo de agentes de atención al cliente para brindar soporte telefónico y por correo electrónico."
+      },
+      {
+        "type": "paragraph",
+        "content": "La empresa desarrolla un chatbot web para brindar respuestas automatizadas a las consultas más comunes de los clientes. ¿Qué beneficios comerciales debería esperar la empresa al crear la solución de bot de chat web?"
+      }
     ],
     "options": {
       "A": "Aumento de ventas",
@@ -20,7 +26,12 @@
     "title": "Pregunta 2",
     "section_id": 1,
     "type": "UNIQUE_SELECTION",
-    "body": ["Para avanzar en el aprendizaje automático, ¿cómo se deben dividir los datos para el entrenamiento y la evaluación?"],
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Para avanzar en el aprendizaje automático, ¿cómo se deben dividir los datos para el entrenamiento y la evaluación?"
+      }
+    ],
     "options": {
       "A": "Utilizar funciones para el entrenamiento y etiquetas para la evaluación.",
       "B": "Divida aleatoriamente los datos en filas para entrenamiento y filas para evaluación.",
@@ -28,5 +39,32 @@
       "D": "Divida aleatoriamente los datos en columnas para entrenamiento y columnas para evaluación."
     },
     "answer": "B"
+  },
+  {
+    "id": 3,
+    "title": "Pregunta 3",
+    "section_id": 1,
+    "type": "MULTIPLE_DROPDOWN",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Está desarrollando un modelo para predecir eventos mediante clasificación. Tiene una matriz de confusión para el modelo evaluado con datos de prueba, como se muestra en la siguiente ilustración."
+      }, {
+        "type": "image",
+        "content": "q003_img001.png"
+      }, {
+        "type": "paragraph",
+        "content": "Utilice los menús desplegables para seleccionar la opción de respuesta que complete cada afirmación según la información presentada en el gráfico."
+      }, {
+        "type": "paragraph",
+        "content": "NOTA: Cada selección correcta vale un punto."
+      }
+    ],
+    "options": {
+      "A": "Un modelo que predice el precio de una casa en función de sus características, utilizando un conjunto de datos etiquetado con precios de casas anteriores.",
+      "B": "Un modelo que agrupa clientes en segmentos basados en sus comportamientos de compra, sin utilizar etiquetas.",
+      "C": "Un modelo que genera texto automáticamente a partir de un conjunto de datos no etiquetado."
+    },
+    "answer": "A"
   }
 ]

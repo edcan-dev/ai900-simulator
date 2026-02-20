@@ -29,7 +29,6 @@ export const SimulationContainer = ({ type, questions }: Props) => {
         />
       ) : (
         <Simulation
-          type={type}
           questions={questions}
         />
       )}

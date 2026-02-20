@@ -5,15 +5,16 @@ import { Field, FieldContent, FieldDescription, FieldLabel, FieldTitle } from "@
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { saveQuestionResult } from "@/services/simulation";
-import { Question, QuestionAnswer, UniqueSelectionQuestion } from "@/types/questions";
+import { Question, QuestionAnswer, UniqueSelectionQuestion as UniqueSelectionQuestionType } from "@/types/questions";
 import { useState } from "react";
+import { QuestionBody } from "./QuestionBody";
 
 interface Props {
-  question: UniqueSelectionQuestion;
+  question: UniqueSelectionQuestionType;
   moveToNextQuestion: () => void;
 }
 
-export const UniqueSelectionQuestionBody = ({ question, moveToNextQuestion }: Props) => {
+export const UniqueSelectionQuestion = ({ question, moveToNextQuestion }: Props) => {
 
   const { body, options, answer } = question;
   const [selectedOption, setSelectedOption] = useState<string>('');
@@ -29,9 +30,10 @@ export const UniqueSelectionQuestionBody = ({ question, moveToNextQuestion }: Pr
 
   return (
     <div className="p-4">
-      {body.map((paragraph, index) => (
-        <p key={index} className="mb-4 font-text">{paragraph}</p>
-      ))}
+      
+      <QuestionBody
+        body={body}
+      />
 
       <RadioGroup
         className="mb-4 gap-4"

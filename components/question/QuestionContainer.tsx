@@ -1,7 +1,8 @@
 'use client'
 import { QuestionType } from '@/enums/questions';
-import { Question, UniqueSelectionQuestion } from '../../types/questions/index';
-import { UniqueSelectionQuestionBody } from './question-body/UniqueSelectionQuestionBody';
+import { MultipleDropdownQuestion as MultipleDropdownQuestionType, Question, UniqueSelectionQuestion as UniqueSelectionQuestionType } from '../../types/questions/index';
+import { UniqueSelectionQuestion } from './question-body/UniqueSelectionQuestion';
+import { MultipleDropdownQuestion } from './question-body/MultipleDropdownQuestionBody';
 
 interface Props {
   question: Question;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export const QuestionContainer = ({ question, moveToNextQuestion }: Props) => {
+  console.log(question)
   return (
     <>
 
@@ -18,13 +20,20 @@ export const QuestionContainer = ({ question, moveToNextQuestion }: Props) => {
       </div>
       {
         question.type === QuestionType.UNIQUE_SELECTION && (
-          <UniqueSelectionQuestionBody
-            question={question as UniqueSelectionQuestion} 
+          <UniqueSelectionQuestion
+            question={question as UniqueSelectionQuestionType} 
             moveToNextQuestion={moveToNextQuestion}
           />
         )
       }
-      
+      {
+        question.type === QuestionType.MULTIPLE_DROPDOWN && (
+          <MultipleDropdownQuestion
+            question={question as MultipleDropdownQuestionType} 
+            moveToNextQuestion={moveToNextQuestion}
+          />
+        )
+      }
     </>
   )
 }

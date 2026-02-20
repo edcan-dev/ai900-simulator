@@ -8,11 +8,10 @@ import { questions } from '../../data/questions/index';
 import { QuestionContainer } from "../question/QuestionContainer";
 
 interface Props {
-  type: SimulationType;
   questions: Question[];
 }
 
-export const Simulation = ({ type, questions }: Props) => {
+export const Simulation = ({ questions }: Props) => {
 
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
 

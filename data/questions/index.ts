@@ -10,4 +10,10 @@ export const questions = (questionsData as BaseQuestion[]).map((question) => {
 
   }
 
+  if(question.type === 'MULTIPLE_DROPDOWN') {
+
+    const multipleDropdownQuestion = question as BaseQuestion;
+    return multipleDropdownQuestion;
+  }
+  
 });

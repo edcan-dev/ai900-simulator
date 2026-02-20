@@ -1,4 +1,5 @@
 import { QuestionType } from '@/enums/questions';
+import { QuestionBody } from '../../components/question/question-body/QuestionBody';
 
 export type QuestionAnswer = {
   questionId: number;
@@ -15,12 +16,22 @@ export type BaseQuestion = {
   type: QuestionType;  
 }
 
+export type QuestionBodyItem = {
+  type: string;
+  content: string;
+}
+
 export type UniqueSelectionQuestion = BaseQuestion & {
-  body: string[];
+  body:QuestionBodyItem[];
   options: {
     [key: string]: string;
   };
   answer: string;
 };
 
-export type Question = BaseQuestion | UniqueSelectionQuestion;
+export type MultipleDropdownQuestion = BaseQuestion & {
+  body:QuestionBodyItem[];
+  
+};
+
+export type Question = BaseQuestion | UniqueSelectionQuestion | MultipleDropdownQuestion;
