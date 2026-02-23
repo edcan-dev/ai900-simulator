@@ -23,15 +23,19 @@ export type QuestionBodyItem = {
 
 export type UniqueSelectionQuestion = BaseQuestion & {
   body:QuestionBodyItem[];
-  options: {
-    [key: string]: string;
-  };
+  options: QuestionOptions;
   answer: string;
 };
 
 export type MultipleDropdownQuestion = BaseQuestion & {
   body:QuestionBodyItem[];
-  
+  options: QuestionOptions[];
+  answer: string[];
 };
+
+export type QuestionOptions = {
+  key: string;
+  value: string;
+}
 
 export type Question = BaseQuestion | UniqueSelectionQuestion | MultipleDropdownQuestion;

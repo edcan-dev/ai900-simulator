@@ -1,11 +1,10 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
-import { Field, FieldContent, FieldDescription, FieldLabel, FieldTitle } from "@/components/ui/field";
-import { Label } from "@/components/ui/label";
+import { Field, FieldContent, FieldLabel, FieldTitle } from "@/components/ui/field";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { saveQuestionResult } from "@/services/simulation";
-import { Question, QuestionAnswer, UniqueSelectionQuestion as UniqueSelectionQuestionType } from "@/types/questions";
+import { QuestionAnswer, UniqueSelectionQuestion as UniqueSelectionQuestionType } from "@/types/questions";
 import { useState } from "react";
 import { QuestionBody } from "./QuestionBody";
 

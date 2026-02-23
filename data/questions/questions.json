@@ -60,11 +60,20 @@
         "content": "NOTA: Cada selección correcta vale un punto."
       }
     ],
-    "options": {
-      "A": "Un modelo que predice el precio de una casa en función de sus características, utilizando un conjunto de datos etiquetado con precios de casas anteriores.",
-      "B": "Un modelo que agrupa clientes en segmentos basados en sus comportamientos de compra, sin utilizar etiquetas.",
-      "C": "Un modelo que genera texto automáticamente a partir de un conjunto de datos no etiquetado."
-    },
-    "answer": "A"
+    "options": [
+      {
+        "A": "5",
+        "B": "11",
+        "C": "1.033",
+        "D": "13.951"
+      },
+      {
+        "A": "5",
+        "B": "11",
+        "C": "1.033",
+        "D": "13.951"
+      }
+    ],
+    "answer": ["B", "C"]
   }
 ]
