@@ -2,7 +2,7 @@
 import { QuestionType } from '@/enums/questions';
 import { MultipleDropdownQuestion as MultipleDropdownQuestionType, Question, UniqueSelectionQuestion as UniqueSelectionQuestionType } from '../../types/questions/index';
 import { UniqueSelectionQuestion } from './question-body/UniqueSelectionQuestion';
-import { MultipleDropdownQuestion } from './question-body/MultipleDropdownQuestionBody';
+import { MultipleDropdownQuestion } from './question-body/MultipleDropdownQuestion';
 
 interface Props {
   question: Question;
