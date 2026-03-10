@@ -1,9 +1,9 @@
 import { QuestionType } from '@/enums/questions';
-import { QuestionBody } from '../../components/question/question-body/QuestionBody';
 
 export type QuestionAnswer = {
   questionId: number;
-  selectedOption: string;
+  selectedOption: string | string[];
+  questionType: QuestionType;
 }
 
 export type BaseQuestion = {

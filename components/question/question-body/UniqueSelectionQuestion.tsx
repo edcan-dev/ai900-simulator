@@ -1,12 +1,13 @@
 'use client';
 
-import { Button } from "@/components/ui/button";
 import { Field, FieldContent, FieldLabel, FieldTitle } from "@/components/ui/field";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { saveQuestionResult } from "@/services/simulation";
 import { QuestionAnswer, UniqueSelectionQuestion as UniqueSelectionQuestionType } from "@/types/questions";
 import { useState } from "react";
 import { QuestionBody } from "./QuestionBody";
+import { NextQuestionButton } from "../NextQuestionButton";
+import { QuestionType } from "@/enums/questions";
 
 interface Props {
   question: UniqueSelectionQuestionType;
@@ -15,13 +16,14 @@ interface Props {
 
 export const UniqueSelectionQuestion = ({ question, moveToNextQuestion }: Props) => {
 
-  const { body, options, answer } = question;
-  const [selectedOption, setSelectedOption] = useState<string>('');
+  const { body, options } = question;
+  const [selectedOption, setSelectedOption] = useState<UniqueSelectionQuestionType['answer']>('');
 
-  function validateAnswer(value: string) {
+  function saveQuestionAnswer(value: string) {
     const questionResult: QuestionAnswer = {
       questionId: question.id,
-      selectedOption: value
+      selectedOption: value,
+      questionType: QuestionType.UNIQUE_SELECTION
     };
     saveQuestionResult(questionResult);
     moveToNextQuestion();
@@ -59,19 +61,10 @@ export const UniqueSelectionQuestion = ({ question, moveToNextQuestion }: Props)
         ))}
 
         <FieldLabel className="w-full justify-end">
-          <Button
-            type="submit"
-            size={'lg'}
-            disabled={!selectedOption}
-            className={`bg-gradient-primary-to-accent text-foreground-secondary font-text py-6 transition-all ${
-            selectedOption ? 'cursor-pointer' : 'cursor-not-allowed opacity-50'
-            }`}
-            onClick={() => {
-              validateAnswer(selectedOption)
-            }}
-          >
-          Siguente
-          </Button>
+          <NextQuestionButton
+            selectedOption={selectedOption}
+            onClick={() => saveQuestionAnswer(selectedOption)}
+          />
         </FieldLabel>
       </RadioGroup>
 
