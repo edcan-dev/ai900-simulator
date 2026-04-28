@@ -75,5 +75,57 @@
       }
     ],
     "answer": ["B", "C"]
+  },
+  {
+    "id": 4,
+    "title": "Pregunta 4",
+    "section_id": 1,
+    "type": "UNIQUE_SELECTION",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Usted construye un modelo de aprendizaje automático utilizando la interfaz de usuario (UI) de aprendizaje automático automatizada."
+      },
+      {
+        "type": "paragraph",
+        "content": "Debe asegurarse de que el modelo cumpla con el principio de transparencia de Microsoft para una IA responsable."
+      },
+      {
+        "type": "paragraph",
+        "content": "What should you do?"
+      }
+    ],
+    "options": {
+      "A": "Establezca el tipo de validación en Automático.",
+      "B": "Habilitar Explicar el mejor modelo.",
+      "C": "Establezca la métrica principal en precisión.",
+      "D": "Establezca el máximo de iteraciones simultáneas en 0."
+    },
+    "answer": "B"
+  },{
+    "id": 5,
+    "title": "Pregunta 5",
+    "section_id": 1,
+    "type": "MULTIPLE_STATEMENT",
+    "body": [
+      {
+        "type": "paragraph",
+        "content": "Para cada una de las siguientes afirmaciones, seleccione Sí si la afirmación es verdadera. De lo contrario, seleccione No."
+      },
+      {
+        "type": "paragraph",
+        "content": "NOTA: Cada selección correcta vale un punto."
+      }
+    ],
+    "options": {
+      "A": "Pronosticar los precios de viviendas basándose en datos históricos es un ejemplo de detección de anomalías.",
+      "B": "Identificar señales sospechosas buscando desviaciones de los patrones habituales es un ejemplo de detección de anomalías.",
+      "C": "Predecir si un paciente desarrollará diabetes basándose en el historial médico del paciente es un ejemplo de detección de anomalías."
+    },
+    "answer": {
+      "A": false,
+      "B": true,
+      "C": false
+    }
   }
 ]

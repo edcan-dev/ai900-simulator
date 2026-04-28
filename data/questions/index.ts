@@ -1,4 +1,4 @@
-import { BaseQuestion, MultipleDropdownQuestion } from "@/types/questions";
+import { BaseQuestion, MultipleDropdownQuestion, MultipleStatementQuestion } from "@/types/questions";
 import questionsData from "./questions.json";
 import { UniqueSelectionQuestion } from '../../types/questions/index';
 
@@ -14,6 +14,11 @@ export const questions = (questionsData as BaseQuestion[]).map((question) => {
 
     const multipleDropdownQuestion = question as MultipleDropdownQuestion;
     return multipleDropdownQuestion;
+  }
+
+  if(question.type === 'MULTIPLE_STATEMENT') {
+    const multipleStatementQuestion = question as MultipleStatementQuestion;
+    return multipleStatementQuestion;
   }
   
 });

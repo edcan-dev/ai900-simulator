@@ -1,14 +1,15 @@
 import { Button } from "../ui/button";
 
 interface Props {
-  selectedOption: string | string[];
+  selectedOption: string | string[] | { [key: string]: boolean };
   onClick: () => void;
 }
 
 export const NextQuestionButton = ({ selectedOption, onClick }: Props) => {
   const isDisabled =
     (typeof selectedOption === "string" && selectedOption === "") ||
-    (Array.isArray(selectedOption) && selectedOption.length === 0);
+    (Array.isArray(selectedOption) && selectedOption.length === 0) ||
+    (typeof selectedOption === "object" && Object.values(selectedOption).every((v) => !v));
 
   return (
     <Button

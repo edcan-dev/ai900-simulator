@@ -4,6 +4,7 @@ export enum QuestionType {
   TRUE_FALSE = "TRUE_FALSE",
   SHORT_ANSWER = "SHORT_ANSWER",
   MULTIPLE_DROPDOWN = "MULTIPLE_DROPDOWN",
+  MULTIPLE_STATEMENT = "MULTIPLE_STATEMENT",
 }
 
 export enum DifficultyLevel {

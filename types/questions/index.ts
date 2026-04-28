@@ -2,7 +2,7 @@ import { QuestionType } from '@/enums/questions';
 
 export type QuestionAnswer = {
   questionId: number;
-  selectedOption: string | string[];
+  selectedOption: string | string[] | { [key: string]: boolean };
   questionType: QuestionType;
 }
 
@@ -33,9 +33,15 @@ export type MultipleDropdownQuestion = BaseQuestion & {
   answer: string[];
 };
 
+export type MultipleStatementQuestion = BaseQuestion & {
+  body:QuestionBodyItem[];
+  options: QuestionOptions;
+  answer: { [key: string]: boolean };
+}
+
 export type QuestionOptions = {
   key: string;
   value: string;
 }
 
-export type Question = BaseQuestion | UniqueSelectionQuestion | MultipleDropdownQuestion;
+export type Question = BaseQuestion | UniqueSelectionQuestion | MultipleDropdownQuestion | MultipleStatementQuestion;
